@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- 
+	Definition der Startampel
+	Default Startampel für Rennbildschirme bei dennen keine Startampel.xml Datei abgelegt ist.
+
+-->
+<!--
+	Als Bilder werden nur .jpg Dateien unterstützt.
+	Alle Bilder müßen im gleichen Verzeichnis wie diese Datei liegen
+
+	framepos:
+		x,y:  Position des Startampelfensters
+		( Beachte: Bei gleicher x,y Position wird Startampelframe nicht neu gezeichnet !!! )
+		x="auto" - Ampel wird horizontal auf dem Rennbildschirm zentriert
+		y="auto" - Ampel wird vertikal auf dem Rennbildschirm zentriert
+		Es ist möglich eine Pixelzahl und "auto" zu kombinieren.
+
+	w,h:  Breite und Höhe des Startampelfensters
+		bcolor:  Background farbe
+		bimage:  Background Bild
+		( wenn bei beiden nichts diefiniert ist, ist der Hintergrund transparent )
+
+	ampelpos: Setzt eine Ampel auf eine Position innerhalb des Startampelfensters 
+		nr:   1-5
+		x,y:  Position 
+		w,h:  Breite und Höhe 
+
+	showampel:
+		value:	on =  Startampelfenster wird angezeigt
+				off = Startampelfenster wird ausgeblendet
+
+	ampel:
+		nr:  all=Alle Ampeln oder 1-5
+		value: red, yellow, green oder off
+		takt:  Blinkzeit in 1/10 sec
+		
+	wait:
+		time:  Wartezeit in 1/10 sec
+		timemax:  Ist hier ein Wert eingetragen wird eine Zufalsszeit zwischen time und timemax gewartet
+	
+	rennstatus: ( nur für das Rennen mit Startampel. Solange keine Freigabe ist Frükstarterkennung aktiv )
+		status: freigabe ( Freigabe des Rennens )
+			  weiter ( Fortsetzung nach Pause, Chaos, etc.)
+
+	loadpic:
+		red, yellow, green, off:  Bilder der Ampel für die entsprechenden Zustände
+
+	fruehstarter:  Text für den Frühstarter
+		xpos,ypos:  Position des Textes
+		fh, fc, ft: Font Höhe, Farbe, Typ
+		prefix: Text der vor dem Namen des Frühstarters erscheint
+		>Fruehstarter: Der Chef<   Vorbesetzung für den Test
+
+	sound: Ausgabe von Sound oder einem Sprachtext
+	filename:	Filename des Sounds ( Datei muss in Verzeichnis Sounds liegen )
+	sprachtext:	Sprachtext der gesprochen werden soll (Variablen siehe Sprachfiles im Ordner Sprachausgabe )
+			Sprachtext wird nur gesprochen, wenn die Sprachausgabe eingeschaltet ist !
+
+	Ist ein Sound-Filename und ein Sprachtext angegeben wird der Sprachtext gesprochen
+	z.B.:
+	<sound filename="141528__escortmarius__misstart.wav" sprachtext="%fahrer% hat einen Frühstart verursacht"></sound>
+-->
+<startampel>
+	<init>
+		<one>
+			<!-- Dieser Teil wird nur beim Start des Rennbildschirmes aufgerufen -->
+			<loadpic red="Ampel-an-rot_73x300.jpg" yellow="Ampel-an-gelb_73x300.jpg" green="Ampel-an-gruen_73x300.jpg" off="Ampel-aus_73x300.jpg"></loadpic>
+			<!-- Position/Größe dieser Startampel in den Zusatzmonitoren value="X" Zusatzmonitor X=1-8 -->
+			<!-- top/left Bei Eintrag = 0 wird dieser zentriert berechnet -->
+			<!-- width/height Bei Eintrag = 0 wird dieser kalibriert entsprechend dem anderen Wert berechnet. Beide=0 Orginalgröße -->
+			<monitor value="1" top="0" left="0" width="0" height="0"></monitor>
+			<monitor value="2" top="0" left="0" width="0" height="0"></monitor>
+			<monitor value="3" top="0" left="0" width="0" height="0"></monitor>
+			<monitor value="4" top="0" left="0" width="0" height="0"></monitor>
+		</one>
+	</init>
+	<training>
+		<one>
+			<!-- Dieser Teil wird bei jeder Anwahl von diesem Modus einmal aufgerufen -->
+			<!-- Position des Frames und der einzelnen Ampel festlegen -->
+			<framepos x="auto" y="40" w="520" h="480" bcolor="" bimage="startampeltraeger-rs.jpg" tc="FFFFFF"></framepos>
+			<ampelpos nr="1" x="45" y="115" w="73" h="300"></ampelpos>
+			<ampelpos nr="2" x="134" y="115" w="73" h="300"></ampelpos>
+			<ampelpos nr="3" x="223" y="115" w="73" h="300"></ampelpos>
+			<ampelpos nr="4" x="312" y="115" w="73" h="300"></ampelpos>
+			<ampelpos nr="5" x="401" y="115" w="73" h="300"></ampelpos>
+		</one>
+		<start>
+			<!-- Training wurde gestartet -->
+			<bbstartknopfsimulation/>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<showampel value="on"></showampel>
+			<wait time="6"></wait>
+			<ampel nr="5" value="red" takt="0"></ampel>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<ampel nr="1" value="red" takt="0"></ampel>
+			<sound filename="66699__mad-monkey__003.wav"></sound>
+			<wait time="6"></wait>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<ampel nr="4" value="red" takt="0"></ampel>
+			<ampel nr="2" value="red" takt="0"></ampel>
+			<sound filename="66698__mad-monkey__002.wav"></sound>
+			<wait time="4"></wait>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<sound filename="66697__mad-monkey__001.wav"></sound>
+			<wait time="5"></wait>
+			<ampel nr="all" value="green" takt="0"></ampel>
+			<rennstatus status="freigabe"></rennstatus>
+			<sound filename="37732__longhairman__1khz-1ds-peep.wav"></sound>
+			<wait time="4"></wait>
+			<showampel value="off"></showampel>
+		</start>
+		<abbruch>
+			<!-- Training wurde abgebrochen -->
+			<bbstartknopfsimulation/>
+			<ampel nr="all" value="red" takt="10"></ampel>
+			<showampel value="on"></showampel>
+		</abbruch>
+		<pause>
+			<!-- Training Pause -->
+			<ampel nr="all" value="yellow" takt="10"></ampel>
+			<showampel value="on"></showampel>
+		</pause>
+		<weiter>
+			<!-- Training Weiter nach Pause -->
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<showampel value="on"></showampel>
+			<wait time="6"></wait>
+			<ampel nr="5" value="red" takt="0"></ampel>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<ampel nr="1" value="red" takt="0"></ampel>
+			<sound filename="66699__mad-monkey__003.wav"></sound>
+			<wait time="6"></wait>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<ampel nr="4" value="red" takt="0"></ampel>
+			<ampel nr="2" value="red" takt="0"></ampel>
+			<sound filename="66698__mad-monkey__002.wav"></sound>
+			<wait time="4"></wait>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<sound filename="66697__mad-monkey__001.wav"></sound>
+			<wait time="5"></wait>
+			<ampel nr="all" value="green" takt="0"></ampel>
+			<rennstatus status="weiter"></rennstatus>
+			<sound filename="37732__longhairman__1khz-1ds-peep.wav"></sound>
+			<wait time="4"></wait>
+			<showampel value="off"></showampel>
+		</weiter>
+		<yellowphase>
+			<!-- Chaos Yellow-Phase -->
+			<ampel nr="all" value="yellow" takt="10"></ampel>
+			<showampel value="on"></showampel>
+		</yellowphase>
+		<ende>
+			<!-- Training Ende -->
+			<bbstartknopfsimulation/>
+			<ampel nr="all" value="red" takt="0"></ampel>
+			<showampel value="on"></showampel>
+			<wait time="50"></wait>
+			<showampel value="off"></showampel>
+		</ende>
+	</training>
+	<quali>
+		<one>
+			<!-- Dieser Teil wird bei jeder Anwahl von diesem Modus einmal aufgerufen -->
+			<!-- Position des Frames und der einzelnen Ampel festlegen -->
+			<framepos x="auto" y="40" w="520" h="480" bcolor="" bimage="startampeltraeger-rs.jpg" tc="FFFFFF"></framepos>
+			<ampelpos nr="1" x="45" y="115" w="73" h="300"></ampelpos>
+			<ampelpos nr="2" x="134" y="115" w="73" h="300"></ampelpos>
+			<ampelpos nr="3" x="223" y="115" w="73" h="300"></ampelpos>
+			<ampelpos nr="4" x="312" y="115" w="73" h="300"></ampelpos>
+			<ampelpos nr="5" x="401" y="115" w="73" h="300"></ampelpos>
+		</one>
+		<start>
+			<!-- Quali wurde gestartet -->
+			<bbstartknopfsimulation/>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<showampel value="on"></showampel>
+			<wait time="6"></wait>
+			<ampel nr="5" value="red" takt="0"></ampel>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<ampel nr="1" value="red" takt="0"></ampel>
+			<sound filename="66699__mad-monkey__003.wav"></sound>
+			<wait time="6"></wait>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<ampel nr="4" value="red" takt="0"></ampel>
+			<ampel nr="2" value="red" takt="0"></ampel>
+			<sound filename="66698__mad-monkey__002.wav"></sound>
+			<wait time="4"></wait>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<sound filename="66697__mad-monkey__001.wav"></sound>
+			<wait time="5"></wait>
+			<rennstatus status="freigabe"></rennstatus>
+			<sound filename="37732__longhairman__1khz-1ds-peep.wav"></sound>
+			<ampel nr="all" value="green" takt="0"></ampel>
+			<wait time="4"></wait>
+			<showampel value="off"></showampel>
+		</start>
+		<abbruch>
+			<!-- Quali wurde abgebrochen -->
+			<bbstartknopfsimulation/>
+			<ampel nr="all" value="red" takt="10"></ampel>
+			<showampel value="on"></showampel>
+		</abbruch>
+		<pause>
+			<!-- Quali Pause -->
+			<ampel nr="all" value="yellow" takt="10"></ampel>
+			<showampel value="on"></showampel>
+		</pause>
+		<weiter>
+			<!-- Quali Weiter nach Pause -->
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<showampel value="on"></showampel>
+			<wait time="6"></wait>
+			<ampel nr="5" value="red" takt="0"></ampel>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<ampel nr="1" value="red" takt="0"></ampel>
+			<sound filename="66699__mad-monkey__003.wav"></sound>
+			<wait time="6"></wait>
+			<ampel nr="4" value="red" takt="0"></ampel>
+			<ampel nr="2" value="red" takt="0"></ampel>
+			<sound filename="66698__mad-monkey__002.wav"></sound>
+			<wait time="4"></wait>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<sound filename="66697__mad-monkey__001.wav"></sound>
+			<wait time="5"></wait>
+			<ampel nr="all" value="green" takt="0"></ampel>
+			<rennstatus status="weiter"></rennstatus>
+			<sound filename="37732__longhairman__1khz-1ds-peep.wav"></sound>
+			<wait time="4"></wait>
+			<showampel value="off"></showampel>
+		</weiter>
+		<yellowphase>
+			<!-- Chaos Yellow-Phase -->
+			<ampel nr="all" value="yellow" takt="10"></ampel>
+			<showampel value="on"></showampel>
+		</yellowphase>
+		<ende>
+			<!-- Quali Ende -->
+			<bbstartknopfsimulation/>
+			<ampel nr="all" value="red" takt="0"></ampel>
+			<showampel value="on"></showampel>
+			<wait time="50"></wait>
+			<showampel value="off"></showampel>
+		</ende>
+	</quali>
+	<rennen>
+		<one>
+			<!-- Dieser Teil wird bei jeder Anwahl von diesem Modus einmal aufgerufen -->
+			<!-- Position des Frames und der einzelnen Ampel festelegen -->
+			<framepos x="auto" y="40" w="520" h="480" bcolor="" bimage="startampeltraeger-rs.jpg" tc="FFFFFF"></framepos>
+			<ampelpos nr="1" x="45" y="115" w="73" h="300"></ampelpos>
+			<ampelpos nr="2" x="134" y="115" w="73" h="300"></ampelpos>
+			<ampelpos nr="3" x="223" y="115" w="73" h="300"></ampelpos>
+			<ampelpos nr="4" x="312" y="115" w="73" h="300"></ampelpos>
+			<ampelpos nr="5" x="401" y="115" w="73" h="300"></ampelpos>
+		</one>
+		<start>
+			<!-- Rennen wurde gestartet -->
+			<ampel nr="5" value="off" takt="0"></ampel>
+			<ampel nr="4" value="off" takt="0"></ampel>
+			<ampel nr="3" value="off" takt="0"></ampel>
+			<ampel nr="2" value="off" takt="0"></ampel>
+			<ampel nr="1" value="off" takt="0"></ampel>
+			<showampel value="on"></showampel>
+			<wait time="10"></wait>
+			<bbstartknopfsimulation/>
+			<ampel nr="1" value="red" takt="0"></ampel>
+			<sound filename="66701__mad-monkey__005.wav"></sound>
+			<wait time="10"></wait>
+			<ampel nr="2" value="red" takt="0"></ampel>
+			<sound filename="66700__mad-monkey__004.wav"></sound>
+			<wait time="10"></wait>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<sound filename="66699__mad-monkey__003.wav"></sound>
+			<wait time="10"></wait>
+			<ampel nr="4" value="red" takt="0"></ampel>
+			<sound filename="66698__mad-monkey__002.wav"></sound>
+			<wait time="10"></wait>
+			<ampel nr="5" value="red" takt="0"></ampel>
+			<sound filename="66697__mad-monkey__001.wav"></sound>
+			<wait time="10" timemax="30"></wait>
+			<ampel nr="all" value="green" takt="0"></ampel>
+			<rennstatus status="freigabe"></rennstatus>
+			<sound filename="37732__longhairman__1khz-1ds-peep.wav"></sound>
+			<wait time="10"></wait>
+			<showampel value="off"></showampel>
+		</start>
+		<fruehstart>
+			<!-- Frühstart wurde erkannt -->
+			<bbstartknopfsimulation/>
+			<showampel value="on"></showampel>
+			<ampel nr="all" value="yellow" takt="10"></ampel>
+			<fruehstarter xpos="46" ypos="430" fh="36" fc="000000FF" ft="Arial" prefix="Frühstart: ">Fruehstarter: Der Chef</fruehstarter>
+			<sound filename="141528__escortmarius__misstart.wav" sprachtext="%fahrer% - Frühstart verursacht"></sound>
+			<soundfruehstartohneabbruch filename="141528__escortmarius__misstart.wav" sprachtext="Frühstart %fahrer%"></soundfruehstartohneabbruch>
+			<wait time="50"></wait>
+			<showampel value="off"></showampel>
+		</fruehstart>
+		<abbruch>
+			<!-- Rennen wurde abgebrochen -->
+			<bbstartknopfsimulation/>
+			<ampel nr="all" value="red" takt="10"></ampel>
+			<showampel value="on"></showampel>
+		</abbruch>
+		<pause>
+			<!-- Rennen Pause -->
+			<ampel nr="all" value="yellow" takt="10"></ampel>
+			<showampel value="on"></showampel>
+			<sound filename="217542__medartimus__car-breaking-skid-01.wav" sprachtext="Safetycar Phase"></sound>
+		</pause>
+		<weiter>
+			<!-- Rennen Weiter nach Pause -->
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<showampel value="on"></showampel>
+			<wait time="6"></wait>
+			<ampel nr="5" value="red" takt="0"></ampel>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<ampel nr="1" value="red" takt="0"></ampel>
+			<sound filename="66699__mad-monkey__003.wav"></sound>
+			<wait time="6"></wait>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<ampel nr="4" value="red" takt="0"></ampel>
+			<ampel nr="2" value="red" takt="0"></ampel>
+			<sound filename="66698__mad-monkey__002.wav"></sound>
+			<wait time="4"></wait>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<sound filename="66697__mad-monkey__001.wav"></sound>
+			<wait time="5"></wait>
+			<ampel nr="all" value="green" takt="0"></ampel>
+			<rennstatus status="weiter"></rennstatus>
+			<sound filename="37732__longhairman__1khz-1ds-peep.wav"></sound>
+			<wait time="4"></wait>
+			<showampel value="off"></showampel>
+		</weiter>
+		<schnellstart>
+			<!-- Rennen mit Schnellstart gestartet -->
+			<bbstartknopfsimulation/>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<showampel value="on"></showampel>
+			<wait time="6"></wait>
+			<ampel nr="5" value="red" takt="0"></ampel>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<ampel nr="1" value="red" takt="0"></ampel>
+			<sound filename="66699__mad-monkey__003.wav"></sound>
+			<wait time="6"></wait>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<ampel nr="4" value="red" takt="0"></ampel>
+			<ampel nr="2" value="red" takt="0"></ampel>
+			<sound filename="66698__mad-monkey__002.wav"></sound>
+			<wait time="4"></wait>
+			<ampel nr="all" value="off" takt="0"></ampel>
+			<ampel nr="3" value="red" takt="0"></ampel>
+			<sound filename="66697__mad-monkey__001.wav"></sound>
+			<wait time="5"></wait>
+			<ampel nr="all" value="green" takt="0"></ampel>
+			<rennstatus status="freigabe"></rennstatus>
+			<sound filename="37732__longhairman__1khz-1ds-peep.wav"></sound>
+			<wait time="4"></wait>
+			<showampel value="off"></showampel>
+		</schnellstart>
+		<yellowphase>
+			<!-- Chaos Yellow-Phase -->
+			<ampel nr="all" value="yellow" takt="10"></ampel>
+			<showampel value="on"></showampel>
+		</yellowphase>
+		<ende>
+			<!-- Rennen Ende -->
+			<bbstartknopfsimulation/>
+			<ampel nr="all" value="red" takt="0"></ampel>
+			<showampel value="on"></showampel>
+			<wait time="50"></wait>
+			<bbstartknopfsimulation/>
+			<wait time="50"></wait>
+			<ampel nr="all" value="yellow" takt="10"></ampel>
+			<wait time="100"></wait>
+			<bbstartknopfsimulation/>
+			<ampel nr="all" value="red" takt="0"></ampel>
+			<wait time="50"></wait>
+			<showampel value="off"></showampel>
+		</ende>
+	</rennen>
+</startampel>

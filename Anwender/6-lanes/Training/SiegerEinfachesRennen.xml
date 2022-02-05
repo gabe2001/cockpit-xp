@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- 
+	Hinweis:
+        Definitionsdatei für die Siegerausgabe Einfaches Rennen
+        ( Es können die gleichen Tags wie beim Renn-Screen verwendet werden )
+        nr = 1   1. Platz
+        nr = 2   2. Platz  usw.
+-->
+<RennScreen>
+	<base>
+		<!-- Kommentar:
+			
+			framepos definiert Höhe und Breite des Designs
+            x,y :  Position im RennScreen ( 0,0 = Zentriert )
+            w,h :  Breite und Höhe des Designs 
+			bcolor = Hintergund-Farbe
+			bimage = Hintergrundbild ( jpg oder bmp Datei ) 
+		-->
+		<framepos x="0" y="0" w="634" h="480" bcolor="" bimage="CPv2-EinfachesRennen.bmp" fahrerposfix="0" sorttraining="0">Bildschirm Dimension+Background</framepos>
+		<defaults ft="Arial">Schriftart-Defaults Hier nur Fonttyp(Muss)</defaults>
+	</base>
+	<grafik>
+		<!-- bitmap x1/y1=Eckpunt Oben tc=Transparentfarbe -->
+	</grafik>
+	<texte>
+		<defaults fh="20" fc="FFFFFF" ft="">Schriftart-Defaults Höhe(Muss),Color(Muss),Typ</defaults>
+		<text xpos="290" ypos="327" fh="28" fc="00808080" ft="Arial Black" text="Zeit" fs="b"></text>
+		<text xpos="290" ypos="360" fh="28" fc="00808080" ft="Arial Black" text="Runden: " fs="b"></text>
+		<text xpos="340" ypos="332" fh="20" ft="Arial Black" fs="b" fc="00808080" text="(min:sek):"></text>
+	</texte>
+	<variablen>
+		<!-- nr=(Poition) oder (Slot/Kodierung), nks=Anzahl Nachkomma-Stellen -->
+		<!-- Kommentar: Bild des Fahrers 1-n -->
+		<bildfahrer x1="420" y1="166" x2="620" y2="316" nr="1" sort="0"/>
+		<!-- Kommentar:  Bezeichnung der Fahrer 1.Platz -->
+		<defaults fh="30" fc="00800080" ft="">Schriftart-Defaults Höhe(Muss),Color(Muss),Typ</defaults>
+		<fahrer nr="1" xpos="161" ypos="194" fa="left" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fh="36" ft="Arial Black" fdc="000000FF" fs="b" fc="00505050" option="">Fahrer123456789</fahrer>
+		<fahrer nr="1" xpos="162" ypos="196" fa="left" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fh="36" ft="Arial Black" fdc="000000FF" fs="b" fc="000080FF" option="">Fahrer123456789</fahrer>
+		<!-- Kommentar:  Bezeichnung des Fahrzeugs 1.Platz -->
+		<defaults fh="30" fc="00800080" ft="">Schriftart-Defaults Höhe(Muss),Color(Muss),Typ</defaults>
+		<fahrzeug nr="1" xpos="158" ypos="246" fa="left" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fh="28" ft="Arial Black" fdc="000000FF" fs="b" fc="00606060" option="">Fahrzeug123456789000</fahrzeug>
+		<fahrzeug nr="1" xpos="160" ypos="247" fa="left" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fh="28" ft="Arial Black" fdc="000000FF" fs="b" fc="000020CC" option="">Fahrzeug123456789000</fahrzeug>
+		<!-- Kommentar:  Runde 1.Platz -->
+		<defaults fh="30" fc="00800080" ft="">Schriftart-Defaults Höhe(Muss),Color(Muss),Typ</defaults>
+		<runde nr="1" xpos="484" ypos="356" nks="0" post="" mst="1" len="0" fcn="00000000" prefix="" sort="0" go="0" fh="36" ft="Arial Black" fdc="000000FF" fs="b" fc="000080FF" fa="right" option="">9999</runde>
+		<!-- Kommentar:  Fahrzeit 1-n ( nks=Anzahl Stellen msec)-->
+		<defaults fh="30" fc="00800080" ft="">Schriftart-Defaults Höhe(Muss),Color(Muss),Typ</defaults>
+		<fahrzeit nr="1" xpos="431" ypos="322" nks="2" post="" mst="1" len="0" fcn="00000000" prefix="" sort="0" go="0" fh="36" ft="Arial Black" fdc="000000FF" fs="b" fc="000020CC" fa="right" option="">01:00,00 </fahrzeit>
+		<!-- Kommentar:  heutiges Datum nr="0" = Nur Datum nr="1" = Datum und Uhrzeit   -->
+		<datum nr="1" fh="20" fc="00000000" xpos="310" ypos="428" prefix="" nks="0" mst="1" len="0" fcn="00000000" post="" sort="0" go="0" ft="Arial" fdc="000000FF" fs="b" fa="left" option="">10.04.2006</datum>
+		<!-- Kommentar: Autoclose zum Schliessen des Schirms nach voreingestellter Zeit, nr=Anzahl Sekunden -->
+		<autoclose xpos="162" ypos="430" nr="20" nks="0" mst="0" len="0" fcn="00008000" prefix="noch " post=" sek." sort="0" go="0" option="" fh="20" ft="Arial Black" fdc="000000FF" fs="b" fc="000000FF" fa="left">noch 99 sek.</autoclose>
+	</variablen>
+</RennScreen>

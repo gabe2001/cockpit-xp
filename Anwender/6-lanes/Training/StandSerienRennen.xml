@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- 
+Hinweis:
+        Definitionsdatei für Zwischenstand/Endstand ClubRennen+VeranstaltungsRennen
+-->
+<RennScreen>
+	<base>
+		<!-- Kommentar:     framepos definiert Höhe und Breite des Designs
+                       
+                        x,y :  Position im RennScreen ( 0,0 = Zentriert )
+                        w,h :  Breite und Höhe des Designs 
+			bcolor = Hintergund-Farbe
+			bimage = Backgroundimage ( bmp Datei ) 
+	-->
+		<framepos x="0" y="0" w="640" h="480" bcolor="" bimage="cp-start-grid-klein_640x480.bmp" fahrerposfix="0">Bildschirm Dimension+Background</framepos>
+		<defaults ft="Tahoma">Schriftart-Defaults</defaults>
+	</base>
+	<variablen>
+		<!-- Überschrift Endstand oder Zwischenstand  -->
+		<defaults fh="20">Schriftart-Defaults</defaults>
+		<crrenntag xpos="369" ypos="9" fh="36" fc="00C0C0C0" ft="Tahoma" nr="0" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fdc="000000FF" fs="b" fa="left">Renntag</crrenntag>
+		<crrenntag xpos="368" ypos="7" fh="36" fc="00FFFFFF" ft="Tahoma" nr="0" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fdc="000000FF" fs="b" fa="left">Renntag</crrenntag>
+		<crdurchgang xpos="369" ypos="16" fh="28" fc="00C0C0C0" ft="Tahoma" nr="0" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fdc="000000FF" fs="b" fa="left">Durchgang</crdurchgang>
+		<crdurchgang xpos="368" ypos="15" fh="28" fc="000000FF" ft="Tahoma" nr="0" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fdc="000000FF" fs="b" fa="left">Durchgang</crdurchgang>
+		<!-- Kommentar:  Platz 1 - 8 -->
+		<defaults fh="20" fc="0015E8F2" fa="left">Schriftart-Defaults</defaults>
+		<crname nr="1" fh="22" xpos="368" ypos="53" nks="0" mst="1" len="44" fcn="00000000" prefix="" post="" sort="0" go="0" ft="Tahoma" fdc="000000FF" fs="b" fc="000080FF" fa="left">Name ClubRennen</crname>
+		<crplatz nr="1" xpos="80" ypos="52" post=". Platz" nks="0" mst="1" len="0" fcn="00000000" prefix="" sort="0" go="0" fh="32" ft="Tahoma" fdc="000000FF" fs="b" fc="0015E8F2" fa="left">1. Platz</crplatz>
+		<crfahrer nr="1" xpos="66" ypos="116" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fh="22" ft="Tahoma" fdc="000000FF" fs="b" fc="0015E8F2" fa="left">Fahrer123456789</crfahrer>
+		<crpunkte nr="1" xpos="66" ypos="138" nks="0" mst="1" len="0" fcn="00000000" prefix="" post=" Punkte" sort="0" go="0" fh="26" ft="Tahoma" fdc="000000FF" fs="b" fc="0015E8F2" fa="left">1000 Punkte</crpunkte>
+		<crplatz nr="2" xpos="276" ypos="112" post=". Platz" nks="0" mst="1" len="0" fcn="00000000" prefix="" sort="0" go="0" fh="28" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">2. Platz</crplatz>
+		<crfahrer nr="2" xpos="259" ypos="172" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fh="22" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">Fahrer123456789</crfahrer>
+		<crpunkte nr="2" xpos="259" ypos="194" nks="0" mst="1" len="0" fcn="00000000" prefix="" post=" Punkte" sort="0" go="0" fh="22" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">1000 Punkte</crpunkte>
+		<crplatz nr="3" xpos="470" ypos="172" post=". Platz" nks="0" mst="1" len="0" fcn="00000000" prefix="" sort="0" go="0" fh="26" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">3. Platz</crplatz>
+		<crfahrer nr="3" xpos="447" ypos="230" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fh="20" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">Fahrer123456789</crfahrer>
+		<crpunkte nr="3" xpos="447" ypos="252" nks="0" mst="1" len="0" fcn="00000000" prefix="" post=" Punkte" sort="0" go="0" fh="22" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">1000 Punkte</crpunkte>
+		<crplatz nr="4" xpos="92" ypos="234" post=". Platz" nks="0" mst="1" len="0" fcn="00000000" prefix="" sort="0" go="0" fh="24" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">4. Platz</crplatz>
+		<crfahrer nr="4" xpos="66" ypos="290" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fh="20" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">Fahrer123456789</crfahrer>
+		<crpunkte nr="4" xpos="66" ypos="312" nks="0" mst="1" len="0" fcn="00000000" prefix="" post=" Punkte" sort="0" go="0" fh="22" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">1000 Punkte</crpunkte>
+		<crplatz nr="5" xpos="288" ypos="292" post=". Platz" nks="0" mst="1" len="0" fcn="00000000" prefix="" sort="0" go="0" fh="22" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">5. Platz</crplatz>
+		<crfahrer nr="5" xpos="259" ypos="348" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fh="20" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">Fahrer123456789</crfahrer>
+		<crpunkte nr="5" xpos="259" ypos="370" nks="0" mst="1" len="0" fcn="00000000" prefix="" post=" Punkte" sort="0" go="0" fh="22" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">1000 Punkte</crpunkte>
+		<crplatz nr="6" xpos="474" ypos="351" post=". Platz" nks="0" mst="1" len="0" fcn="00000000" prefix="" sort="0" go="0" fh="20" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">6. Platz</crplatz>
+		<crfahrer nr="6" xpos="447" ypos="408" nks="0" mst="1" len="0" fcn="00000000" prefix="" post="" sort="0" go="0" fh="20" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">Fahrer123456789</crfahrer>
+		<crpunkte nr="6" xpos="447" ypos="430" nks="0" mst="1" len="0" fcn="00000000" prefix="" post=" Punkte" sort="0" go="0" fh="22" ft="Tahoma" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">1000 Punkte</crpunkte>
+		<!-- Kommentar:  heutiges Datum nks="0" = Nur Datum nks="1" = Datum und Uhrzeit   -->
+		<datum nr="0" nsk="0" fh="20" fc="0080FF80" xpos="660" ypos="714" prefix="" nks="0" mst="1" len="0" fcn="00000000" post="" sort="0" go="0" ft="Verdana" fdc="000000FF" fs="b" fa="left">10.04.2006</datum>
+		<autoclose xpos="14" ypos="390" nr="20" nks="0" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" fh="20" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="center">99</autoclose>
+	</variablen>
+</RennScreen>

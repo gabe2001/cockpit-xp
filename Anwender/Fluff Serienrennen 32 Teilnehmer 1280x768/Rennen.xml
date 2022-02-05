@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<RennScreen>
+	<base>
+		<!-- Kommentar: RennScreen für eine Bildschirm-Auflösung 1280*1024 Pixel
+	                xmax, ymax  = tatsächliche Größe des kompl. RennScreens
+					bcolor = Farbe des RennScreens
+					bimage = Backgroundimage ( bmp Datei ) 
+					( entweder Farbe oder Backgroundimage )
+		-->
+		<dim bcolor="00FFFFFF" xmax="1274" ymax="735" bimage="Fluff_6_Fahrer_Ergebnis_Serienrennen_32TLN_1274x735.jpg" fahrerposfix="1" slots="6" sorttraining="0" fontsizefaktor="100">Bildschirm Dimension+Background</dim>
+		<defaults ft="Arial">Schriftart-Defaults Hier nur Fonttyp(Muss)</defaults>
+	</base>
+	<texte>
+		<!-- Nächster Fahrer -->
+		<text left="48" top="27" fh="20" ft="Arial" fs="" fc="00808080" text="Nächster Fahrer:"></text>
+		<text left="222" top="27" fh="20" ft="Arial" fs="" fc="00808080" text="Nächster Fahrer:"></text>
+		<text left="396" top="27" fh="20" ft="Arial" fs="" fc="00808080" text="Nächster Fahrer:"></text>
+		<text left="570" top="27" fh="20" ft="Arial" fs="" fc="00808080" text="Nächster Fahrer:"></text>
+		<text left="744" top="27" fh="20" ft="Arial" fs="" fc="00808080" text="Nächster Fahrer:"></text>
+		<text left="919" top="27" fh="20" ft="Arial" fs="" fc="00808080" text="Nächster Fahrer:"></text>
+		<!-- Kopf Ergebnis -->
+		<text left="303" top="132" fh="48" ft="Arial" fs="b" fc="00000000" text="Ergebnis nach"></text>
+		<text left="645" top="132" fh="48" ft="Arial" fs="b" fc="00000000" text="von"></text>
+		<text left="783" top="132" fh="48" ft="Arial" fs="b" fc="00000000" text="Läufen"></text>
+		<text left="1148" top="134" fh="20" ft="Arial" fs="" fc="00808080" text="Durchgang"></text>
+		<text left="1138" top="157" fh="20" ft="Arial" fs="" fc="00808080" text="Anzahl offen"></text>
+		<!-- Schnellste Runde im Serienrennen -->
+		<text left="1063" top="15" fh="16" ft="Arial" fs="b" fc="00808080" text="Schnellste Runde im S-Rennen"></text>
+		<!-- Chaoskoenig -->
+		<text left="19" top="134" fh="20" ft="Arial" fs="" fc="00808080" text="Chaos-König mit"></text>
+		<!-- Ergebnis Überschrift -->
+		<!-- 1. Spalte -->
+		<text left="19" top="208" fh="20" ft="Arial" fs="" fc="00FF8000" text="Platz"></text>
+		<text left="19" top="190" fh="20" ft="Arial" fs="" fc="00FF8000" text="Ges."></text>
+		<text left="60" top="208" fh="20" ft="Arial" fs="" fc="00FF8000" text="Fahrer"></text>
+		<text left="257" top="190" fh="20" ft="Arial" fs="" fc="00FF8000" text="--------- Gesamt ---------"></text>
+		<text left="256" top="208" fh="20" ft="Arial" fs="" fc="00FF8000" text="Runden"></text>
+		<text left="321" top="208" fh="20" ft="Arial" fs="" fc="00FF8000" text="Zeit/Teilstrecke"></text>
+		<text left="439" top="190" fh="20" ft="Arial" fs="" fc="00FF8000" text="Ren-"></text>
+		<text left="441" top="208" fh="20" ft="Arial" fs="" fc="00FF8000" text="nen"></text>
+		<text left="472" top="208" fh="20" ft="Arial" fs="" fc="00FF8000" text="Chaos"></text>
+		<text left="535" top="208" fh="20" ft="Arial" fs="" fc="00FF8000" text="Bestzeit"></text>
+		<text left="597" top="208" fh="20" ft="Arial" fs="" fc="00FF8000" text="Slot"></text>
+		<text left="600" top="190" fh="20" ft="Arial" fs="" fc="00FF8000" text="ID/"></text>
+		<!-- neuer Text -->
+	</texte>
+	<grafik>
+		<!-- Ranking links oben: Farbhintergund -->
+		<roundbox left="15" top="67" breite="161" hoehe="49" nr="1" sort="0" w="5" c="slotcolorbg" dc="00C0C0C0" addonvariablename=""/>
+		<roundbox left="190" top="67" breite="160" hoehe="49" nr="2" sort="0" w="5" c="slotcolorbg" dc="00C0C0C0" addonvariablename=""/>
+		<roundbox left="364" top="67" breite="160" hoehe="49" nr="3" sort="0" w="5" c="slotcolorbg" dc="00C0C0C0" addonvariablename=""/>
+		<roundbox left="538" top="67" breite="160" hoehe="49" nr="4" sort="0" w="5" c="slotcolorbg" dc="00C0C0C0" addonvariablename=""/>
+		<roundbox left="712" top="67" breite="160" hoehe="49" nr="5" sort="0" w="5" c="slotcolorbg" dc="00C0C0C0" addonvariablename=""/>
+		<roundbox left="887" top="67" breite="160" hoehe="49" nr="6" sort="0" w="5" c="slotcolorbg" dc="00C0C0C0" addonvariablename=""/>
+		<!-- neue Grafik -->
+	</grafik>
+	<variablen>
+		<!--  Überschrift     -->
+		<cranzahlrennengefahren left="593" top="132" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="000000FF" fa="center">99</cranzahlrennengefahren>
+		<cranzahlrennengesamt left="724" top="132" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="000000FF" fa="center">99</cranzahlrennengesamt>
+		<cranzahlrennenoffen left="1235" top="155" nr="1" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="" fh="22" ft="Arial" fdc="000000FF" fs="b" fc="000000FF" fa="left">00</cranzahlrennenoffen>
+		<crdurchgang left="1235" top="132" nr="1" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="" fh="22" ft="Arial" fdc="000000FF" fs="b" fc="000000FF" fa="left">00</crdurchgang>
+		<!--  Schnellste Runde     -->
+		<addonVariable left="1065" top="39" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="sRFahrer" fh="24" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">Fahrer12345678901</addonVariable>
+		<addonVariable left="1128" top="65" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="sRZeit" fh="24" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">00,000</addonVariable>
+		<addonVariable left="1065" top="91" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="sRFahrzeug" fh="16" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">FahrzeugName123456789012345</addonVariable>
+		<!-- Chaoskoenig -->
+		<addonVariable left="19" top="157" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="FahrerChaosKing" fh="20" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Chaos-King1234356</addonVariable>
+		<addonVariable left="146" top="134" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="AnzahlChaosKing" fh="20" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">00</addonVariable>
+		<!-- 
+                     Nächster Fahrer oben links 
+                                                            -->
+		<!-- Fahrernamen -->
+		<crnextfahrer left="16" top="82" nr="1" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="20" ft="Arial" fdc="000000FF" fs="b" fc="slotcolor" fa="center">NaechsterFahrer123</crnextfahrer>
+		<crnextfahrer left="190" top="82" nr="2" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="20" ft="Arial" fdc="000000FF" fs="b" fc="slotcolor" fa="center">NaechsterFahrer123</crnextfahrer>
+		<crnextfahrer left="364" top="82" nr="3" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="20" ft="Arial" fdc="000000FF" fs="b" fc="slotcolor" fa="center">NaechsterFahrer123</crnextfahrer>
+		<crnextfahrer left="538" top="82" nr="4" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="20" ft="Arial" fdc="000000FF" fs="b" fc="slotcolor" fa="center">NaechsterFahrer123</crnextfahrer>
+		<crnextfahrer left="712" top="82" nr="5" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="20" ft="Arial" fdc="000000FF" fs="b" fc="slotcolor" fa="center">NaechsterFahrer123</crnextfahrer>
+		<crnextfahrer left="887" top="82" nr="6" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="20" ft="Arial" fdc="000000FF" fs="b" fc="slotcolor" fa="center">NaechsterFahrer123</crnextfahrer>
+		<!--       
+		    Addon-Variablen für Zwischenstand
+		                                       -->
+		<!--   Position/Platzierung    -->
+		<addonVariable left="21" top="230" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz1" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="260" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz2" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="290" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz3" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="320" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz4" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="350" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz5" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="380" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz6" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="410" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz7" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="440" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz8" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="470" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz9" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="500" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz10" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="530" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz11" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="560" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz12" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="590" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz13" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="620" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz14" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="650" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz15" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="21" top="680" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DPlatz16" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<!--   Fahrer    -->
+		<addonVariable left="60" top="230" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer1" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="260" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer2" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="290" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer3" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="320" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer4" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="350" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer5" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="380" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer6" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="410" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer7" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="440" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer8" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="470" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer9" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="500" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer10" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="530" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer11" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="560" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer12" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="590" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer13" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="620" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer14" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="650" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer15" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<addonVariable left="60" top="680" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DFahrer16" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="left">Fahrer123456789</addonVariable>
+		<!--  Anzahl der Runden     -->
+		<addonVariable left="259" top="230" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden1" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="260" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden2" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="290" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden3" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="320" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden4" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="350" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden5" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="380" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden6" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="410" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden7" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="440" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden8" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="470" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden9" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="500" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden10" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="530" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden11" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="560" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden12" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="590" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden13" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="620" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden14" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="650" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden15" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<addonVariable left="259" top="680" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRunden16" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">9999</addonVariable>
+		<!--   Gesamtzeit / Teilstriche    -->
+		<addonVariable left="323" top="230" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit1" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="260" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit2" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="290" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit3" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="320" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit4" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="350" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit5" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="380" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit6" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="410" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit7" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="440" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit8" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="470" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit9" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="500" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit10" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="530" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit11" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="560" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit12" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="590" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit13" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="620" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit14" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="650" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit15" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<addonVariable left="323" top="680" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGZeit16" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00:00,000</addonVariable>
+		<!--  Anzahl der Rennen     -->
+		<addonVariable left="441" top="230" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen1" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="260" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen2" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="290" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen3" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="320" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen4" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="350" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen5" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="380" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen6" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="410" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen7" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="440" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen8" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="470" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen9" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="500" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen10" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="530" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen11" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="560" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen12" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="590" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen13" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="620" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen14" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="650" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen15" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<addonVariable left="441" top="680" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGRennen16" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">99</addonVariable>
+		<!--  Chaos-König     -->
+		<addonVariable left="483" top="230" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos1" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="260" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos2" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="290" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos3" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="320" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos4" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="350" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos5" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="380" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos6" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="410" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos7" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="440" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos8" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="470" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos9" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="500" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos10" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="530" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos11" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="560" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos12" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="590" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos13" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="620" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos14" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="650" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos15" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<addonVariable left="483" top="680" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DGAnzahlChaos16" fh="26" ft="Arial" fdc="000000FF" fs="" fc="000000FF" fa="center">00</addonVariable>
+		<!--  Bestzeit     -->
+		<addonVariable left="522" top="230" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit1" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="260" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit2" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="290" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit3" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="320" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit4" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="350" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit5" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="380" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit6" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="410" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit7" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="440" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit8" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="470" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit9" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="500" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit10" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="530" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit11" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="560" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit12" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="590" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit13" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="620" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit14" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="650" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit15" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<addonVariable left="522" top="680" nr="0" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Zeit16" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="right">00,000</addonVariable>
+		<!--  Bestzeit in Slot / mit ID    -->
+		<addonVariable left="605" top="230" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot1" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="260" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot2" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="290" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot3" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="320" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot4" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="350" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot5" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="380" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot6" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="410" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot7" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="440" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot8" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="470" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot9" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="500" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot10" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="530" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot11" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="560" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot12" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="590" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot13" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="620" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot14" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="650" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot15" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<addonVariable left="605" top="680" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="0" option="" addonvariablename="DsR_Slot16" fh="26" ft="Arial" fdc="000000FF" fs="" fc="00000000" fa="center">0</addonVariable>
+		<!-- neue Variable -->
+	</variablen>
+</RennScreen>

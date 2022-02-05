@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- 
+     Dient als Basis f�r die Entwicklung eines eigenen Rennbildschirms
+-->
+<RennScreen>
+	<base>
+		<!-- Kommentar: RennScreen f�r eine Bildschirm-Aufl�sung 1920x1080 (FullHD) 
+	                
+			xmax, ymax  = tats�chliche Gr��e des kompl. RennScreens
+			bcolor = Farbe des RennScreens
+			bimage = Backgroundimage ( jpg, png oder bmp Datei )
+			fahrerposfix = Legt fest, ob 
+					- die Fahrer wechseln (0), 
+					- immer fest stehen (1)
+					- die Einstellung von der Rennbildschirmauswahl kommt (-1)
+			slots = Anzahl der Spuren
+			sorttraining = 	0 - Trainingsdaten werden nicht sortiert ausgegeben
+			                1 - Trainingsdaten werden sortiert angezeigt
+			
+			( entweder Farbe oder Backgroundimage )
+	-->
+		<dim xmax="1912" ymax="1008" bcolor="404040" bimage="" fahrerposfix="-1" slots="6" sorttraining="0" fontsizefaktor="100">Bildschirm Dimension+Background</dim>
+		<defaults ft="Arial">Schriftart-Defaults Hier nur Fonttyp(Muss)</defaults>
+	</base>
+	<texte>
+		<text left="35" top="40" fh="72" ft="Arial" fs="b" fc="000080FF" text="CPZ Hout"></text>
+	</texte>
+	<grafik>
+		<bitmap left="0" top="0" breite="1912" hoehe="1008" file="C-XP-1912x1008-FullHD.jpg" tc="0"/>
+	</grafik>
+	<variablen>
+		<rennzeit left="1620" top="40" nr="0" nks="0" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">MMM:SS</rennzeit>
+		<!--	Lane 1  -->
+		<runde nr="1" nks="0" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left" left="42" top="240">9999</runde>
+		<rundenzeit left="42" top="320" nr="1" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">99.999</rundenzeit>
+		<histrundenzeit left="40" top="425" nr="1" nks="3" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="0000FF00" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="42" top="475" nr="1" nks="3" mst="2" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="42" top="525" nr="1" nks="3" mst="3" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="42" top="575" nr="1" nks="3" mst="4" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="40" top="625" nr="1" nks="3" mst="5" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="40" top="675" nr="1" nks="3" mst="6" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="40" top="725" nr="1" nks="3" mst="7" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="40" top="775" nr="1" nks="3" mst="8" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="40" top="825" nr="1" nks="3" mst="9" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="40" top="875" nr="1" nks="3" mst="10" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<!--	Lane 2  -->
+		<runde nr="2" nks="0" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left" left="357" top="240">9999</runde>
+		<rundenzeit left="357" top="320" nr="2" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">99.999</rundenzeit>
+		<histrundenzeit left="357" top="425" nr="2" nks="3" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="0000FF00" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="357" top="475" nr="2" nks="3" mst="2" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="357" top="525" nr="2" nks="3" mst="3" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="355" top="575" nr="2" nks="3" mst="4" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="355" top="625" nr="2" nks="3" mst="5" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="355" top="675" nr="2" nks="3" mst="6" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="355" top="725" nr="2" nks="3" mst="7" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="355" top="775" nr="2" nks="3" mst="8" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="355" top="825" nr="2" nks="3" mst="9" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="355" top="875" nr="2" nks="3" mst="10" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<!--	Lane 3  -->
+		<runde nr="3" nks="0" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left" left="672" top="240">9999</runde>
+		<rundenzeit left="672" top="320" nr="3" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">99.999</rundenzeit>
+		<histrundenzeit left="672" top="425" nr="3" nks="3" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="0000FF00" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="672" top="475" nr="3" nks="3" mst="2" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="672" top="525" nr="3" nks="3" mst="3" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="670" top="575" nr="3" nks="3" mst="4" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="670" top="625" nr="3" nks="3" mst="5" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="670" top="675" nr="3" nks="3" mst="6" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="670" top="725" nr="3" nks="3" mst="7" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="670" top="775" nr="3" nks="3" mst="8" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="670" top="825" nr="3" nks="3" mst="9" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="670" top="875" nr="3" nks="3" mst="10" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<!--	Lane 4  -->
+		<runde nr="4" nks="0" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left" left="987" top="240">9999</runde>
+		<rundenzeit left="987" top="320" nr="4" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">99.999</rundenzeit>
+		<histrundenzeit left="987" top="425" nr="4" nks="3" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="0000FF00" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="987" top="475" nr="4" nks="3" mst="2" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="987" top="525" nr="4" nks="3" mst="3" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="985" top="575" nr="4" nks="3" mst="4" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="985" top="625" nr="4" nks="3" mst="5" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="985" top="675" nr="4" nks="3" mst="6" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="985" top="725" nr="4" nks="3" mst="7" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="985" top="775" nr="4" nks="3" mst="8" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="985" top="825" nr="4" nks="3" mst="9" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="985" top="875" nr="4" nks="3" mst="10" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<!--	Lane 5  -->
+		<runde nr="5" nks="0" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left" left="1295" top="240">9999</runde>
+		<rundenzeit left="1295" top="325" nr="5" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">99.999</rundenzeit>
+		<histrundenzeit left="1302" top="425" nr="5" nks="3" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="0000FF00" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1302" top="475" nr="5" nks="3" mst="2" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1302" top="525" nr="5" nks="3" mst="3" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1300" top="575" nr="5" nks="3" mst="4" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1300" top="625" nr="5" nks="3" mst="5" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1300" top="675" nr="5" nks="3" mst="6" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1300" top="725" nr="5" nks="3" mst="7" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1300" top="775" nr="5" nks="3" mst="8" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1300" top="825" nr="5" nks="3" mst="9" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1300" top="875" nr="5" nks="3" mst="10" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<!--	Lane 6  -->
+		<runde nr="6" nks="0" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left" left="1617" top="240">9999</runde>
+		<rundenzeit left="1617" top="330" nr="6" nks="3" mst="0" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="" addonvariablename="" fh="72" ft="Arial" fdc="000000FF" fs="b" fc="00FFFFFF" fa="left">99.999</rundenzeit>
+		<histrundenzeit left="1617" top="425" nr="6" nks="3" mst="1" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="0000FF00" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1617" top="475" nr="6" nks="3" mst="2" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1617" top="525" nr="6" nks="3" mst="3" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1615" top="575" nr="6" nks="3" mst="4" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1615" top="625" nr="6" nks="3" mst="5" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1615" top="675" nr="6" nks="3" mst="6" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1615" top="725" nr="6" nks="3" mst="7" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1615" top="775" nr="6" nks="3" mst="8" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1615" top="825" nr="6" nks="3" mst="9" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<histrundenzeit left="1615" top="875" nr="6" nks="3" mst="10" len="0" fcn="00008000" prefix="" post="" sort="0" go="1" option="SZ# - R#" addonvariablename="" fh="48" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">99.999 - ##</histrundenzeit>
+		<!--    Records   -->
+		<bahnrekord left="844" top="964" nr="1" nks="3" mst="0" len="0" fcn="00008000" prefix="Track record: " post="s" sort="0" go="0" option="" addonvariablename="" fh="36" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">Track record: 9.999s</bahnrekord>
+		<bahnrekordfahrer left="1340" top="964" nr="1" nks="0" mst="0" len="0" fcn="00008000" prefix="by " post="" sort="0" go="0" option="" addonvariablename="" fh="36" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">by racer</bahnrekordfahrer>
+		<bahnrekordslot left="1176" top="964" nr="1" nks="0" mst="0" len="0" fcn="00008000" prefix="on lane " post="" sort="0" go="0" option="" addonvariablename="" fh="36" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">on lane #</bahnrekordslot>
+		<bahnrekorddatum left="1640" top="964" nr="1" nks="0" mst="0" len="0" fcn="00008000" prefix="on " post="" sort="0" go="0" option="" addonvariablename="" fh="36" ft="Arial" fdc="000000FF" fs="b" fc="00C0C0C0" fa="left">on DD.MM.YYYY</bahnrekorddatum>
+		<!-- Records per lane -->
+		<persslotrekord left="125" top="180" nr="1" nks="3" mst="0" len="0" fcn="00008000" prefix="record " post="" sort="0" go="1" option="" addonvariablename="" fh="36" ft="Arial" fdc="00000000" fs="" fc="slotcolor" fa="left">record 9.999</persslotrekord>
+		<persslotrekord left="445" top="178" nr="2" nks="3" mst="0" len="0" fcn="00008000" prefix="record " post="" sort="0" go="1" option="" addonvariablename="" fh="36" ft="Arial" fdc="00000000" fs="" fc="slotcolor" fa="left">record 9.999</persslotrekord>
+		<persslotrekord left="765" top="178" nr="3" nks="3" mst="0" len="0" fcn="00008000" prefix="record " post="" sort="0" go="1" option="" addonvariablename="" fh="36" ft="Arial" fdc="00000000" fs="" fc="slotcolor" fa="left">record 9.999</persslotrekord>
+		<persslotrekord left="1085" top="178" nr="4" nks="3" mst="0" len="0" fcn="00008000" prefix="record " post="" sort="0" go="1" option="" addonvariablename="" fh="36" ft="Arial" fdc="00000000" fs="" fc="slotcolor" fa="left">record 9.999</persslotrekord>
+		<persslotrekord left="1405" top="178" nr="5" nks="3" mst="0" len="0" fcn="00008000" prefix="record " post="" sort="0" go="1" option="" addonvariablename="" fh="36" ft="Arial" fdc="00000000" fs="" fc="slotcolor" fa="left">record 9.999</persslotrekord>
+		<persslotrekord left="1725" top="178" nr="6" nks="3" mst="0" len="0" fcn="00008000" prefix="record " post="" sort="0" go="1" option="" addonvariablename="" fh="36" ft="Arial" fdc="00000000" fs="" fc="slotcolor" fa="left">record 9.999</persslotrekord>
+	</variablen>
+</RennScreen>
